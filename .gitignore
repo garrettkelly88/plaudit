@@ -1,0 +1,9 @@
+# Database
+database/storage/*
+!database/storage/.keep
+
+# App
+app/app/database_info.php
+app/app/public/*
+app/app/public/.*
+!app/app/public/.keep
