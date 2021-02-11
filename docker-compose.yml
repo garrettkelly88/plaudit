@@ -1,0 +1,41 @@
+version: "3.7"
+services:
+  app:
+    image: node
+    container_name: app
+    ports:
+      - 80:80
+    networks:
+      - app_network
+    volumes:
+      - ./app/app:/app
+    restart: on-failure
+
+  database:
+    image: mysql
+    container_name: database
+    networks:
+      - app_network
+    volumes:
+      - ./database/storage:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_DATABASE=tm
+      - MYSQL_USER=plaudituser
+      - MYSQL_PASSWORD=ChangeMe7492#&!
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+    restart: on-failure
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    networks:
+      - app_network
+    restart: always
+    ports:
+      - 8080:8080
+    restart: on-failure
+
+networks:
+  app_network:
