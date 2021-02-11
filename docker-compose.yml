@@ -1,14 +1,15 @@
 version: "3.7"
 services:
   app:
-    image: node
+    build:
+      context: ./app
     container_name: app
-    ports:
-      - 80:80
     networks:
       - app_network
     volumes:
       - ./app/app:/app
+    environment:
+      - APACHE_SERVER_NAME=plaudit.networks.lcl
     restart: on-failure
 
   database:
@@ -21,7 +22,7 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      - MYSQL_DATABASE=tm
+      - MYSQL_DATABASE=plaudit
       - MYSQL_USER=plaudituser
       - MYSQL_PASSWORD=ChangeMe7492#&!
       - MYSQL_RANDOM_ROOT_PASSWORD=yes

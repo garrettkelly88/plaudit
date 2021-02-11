@@ -82,8 +82,9 @@ rm -f /run/apache2/httpd.pid
 
 rm -Rf /app/public/*
 rm -Rf /app/public/.*
-#git -C /app/public clone -b app https://github.com/garrettkelly88/plaudit ./
-#composer install -d /app/public/includes
+git -C /app/public/ clone -b app https://github.com/garrettkelly88/plaudit.git ./
+git -C /app/public/ clone -b swaggerhub https://github.com/garrettkelly88/plaudit.git ./
+composer install -d /app/public
 #ln -s /app/images /app/public
 
 chown -R apache:apache /app && chmod -R 755 /app
