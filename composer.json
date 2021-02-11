@@ -1,6 +1,6 @@
 {
     "repositories": [{
         "type": "path",
-        "url": "./swaggerhub"
+        "url": "./php-symphony/SympfonyBundle-php/"
     }],
 }
