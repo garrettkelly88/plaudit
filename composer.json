@@ -2,5 +2,5 @@
     "repositories": [{
         "type": "path",
         "url": "./php-symphony/SympfonyBundle-php/"
-    }],
+    }]
 }
