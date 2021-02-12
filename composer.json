@@ -1,6 +1,6 @@
 {
     "repositories": [{
         "type": "path",
-        "url": "/app/public/swagger/php-symfony/SymfonyBundle-php/"
+        "url": "/app/swagger/php-symfony/SymfonyBundle-php/"
     }]
 }
