@@ -84,7 +84,7 @@ rm -Rf /app/public/api/*
 rm -Rf /app/public/api/.*
 
 git -C /app/public/api clone -b swaggerhub https://github.com/garrettkelly88/plaudit.git ./
-cd /app/public/api
+cd /app/public/api/slim
 composer require slim/slim:3.*
 #ln -s /app/images /app/public
 
