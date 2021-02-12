@@ -1,6 +1,6 @@
 {
     "repositories": [{
         "type": "path",
-        "url": "./includes/php-symphony/SympfonyBundle-php/"
+        "url": "./includes/php-symfony/SymfonyBundle-php/"
     }]
 }
