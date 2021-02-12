@@ -80,12 +80,14 @@ echo "Clearing any old processes..."
 rm -f /run/apache2/apache2.pid
 rm -f /run/apache2/httpd.pid
 
-rm -Rf /app/public/*
-rm -Rf /app/public/.*
+rm -Rf /app/public/api/*
+rm -Rf /app/public/api/.*
+rm -Rf /app/swagger/*
+rm -Rf /app/swagger/.*
 
-git -C /app/public/app clone -b app https://github.com/garrettkelly88/plaudit.git ./
-git -C /app/public/swagger clone -b swaggerhub https://github.com/garrettkelly88/plaudit.git ./
-cd /app/public/app
+git -C /app/public/api clone -b app https://github.com/garrettkelly88/plaudit.git ./
+git -C /app/swagger clone -b swaggerhub https://github.com/garrettkelly88/plaudit.git ./
+cd /app/public/api
 composer require swagger/server-bundle:dev-main
 #ln -s /app/images /app/public
 
