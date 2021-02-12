@@ -83,10 +83,9 @@ rm -f /run/apache2/httpd.pid
 rm -Rf /app/public/*
 rm -Rf /app/public/.*
 
-git -C /app/public/ clone -b app https://github.com/garrettkelly88/plaudit.git ./
-mkdir /app/public/includes
-git -C /app/public/includes clone -b swaggerhub https://github.com/garrettkelly88/plaudit.git ./
-cd /app/public/
+git -C /app/public/app clone -b app https://github.com/garrettkelly88/plaudit.git ./
+git -C /app/public/swagger clone -b swaggerhub https://github.com/garrettkelly88/plaudit.git ./
+cd /app/public/app
 composer require swagger/server-bundle:dev-main
 #ln -s /app/images /app/public
 
