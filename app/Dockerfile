@@ -69,5 +69,5 @@ RUN mkdir bootstrap
 ADD start.sh /bootstrap/
 RUN chmod +x /bootstrap/start.sh
 
-#EXPOSE 80
+EXPOSE 80
 ENTRYPOINT ["/bootstrap/start.sh"]
