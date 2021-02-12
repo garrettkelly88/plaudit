@@ -4,6 +4,9 @@ database/storage/*
 
 # App
 app/app/database_info.php
-app/app/public/*
-app/app/public/.*
-!app/app/public/.keep
+app/app/public/app/*
+app/app/public/app/.*
+app/app/public/swagger/*
+app/app/public/swagger/.*
+!app/app/public/app/.keep
+!app/app/public/swagger/.keep
